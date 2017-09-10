@@ -146,8 +146,8 @@ AS
 $$
 BEGIN
     IF($1 IS NOT DISTINCT FROM $2) THEN
-        message := 'Assert is equal.';
-        PERFORM assert.ok(message);
+        message := '';
+        PERFORM assert.ok('Assert is equal.');
         result := true;
         RETURN;
     END IF;
